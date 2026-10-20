@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../JavaScript/main.js" defer></script>
+    <script src="../JavaScript/lightbox.js" defer></script>
+    <script src="../JavaScript/search.js" defer></script>
+
+    <!-- EmailJS SDK (Corrected URL with https://) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("BBtllH8y6peL-7imf");
+        })();
+    </script>
+
+    <script src="../JavaScript/validation.js" defer></script>
+
+    <title>Enquiry | Kasi-Tech Solutions</title>
+</head>
+<body>
+    
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <img src="../images/logo.png" alt="Kasi-Tech Logo" class="nav-logo">
+                Kasi_Tech Solutions
+            </a>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html" aria-current="page">Enquiry</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-header">
+        <div class="container">
+            <p class="eyebrow">Get In Touch</p>
+            <h1>Enquire More From Us!!</h1>
+            <p class="page-introduction">Fill out the form below to book a consultation or request a custom service quotation.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Form -->
+    <main class="contact-section">
+        <div class="container">
+            <div class="contact-card" style="max-width: 800px; margin: 0 auto;">
+                <form action="#" method="post" class="contact-form">
+                    
+                    <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Your Personal Information</strong></legend>
+                        <br>
+                       
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="e.g. Somila Manentsa">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="e.g. somilamanentsa@example.com">
+                            <span class="error-message" id="EmailError"></span>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="phone">Phone / WhatsApp Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. 072 763 3457">
+                            <span class="error-message" id="phonenumberError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Suburban Area in Gqeberha:</label>
+                            <input type="text" id="location" name="location" placeholder="e.g. St Georges , Motherwell">
+                        </div>
+                    </fieldset>
+
+                    <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Enquiry & Consultation booking</strong></legend>
+                        <br>
+
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="category">Enquiry Category:</label>
+                            <select id="category" name="category">
+                                <option value="" disabled selected>-- Select an Enquiry Type --</option>
+                                <option value="booking">booking Consultation</option>
+                                <option value="Service Quotation">Services Quotation fee</option>
+                                <option value="general">General Enquiry</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Availability for:</label><br><br>
+                            
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="avail_saturday" name="availability[]" value="Saturday">
+                                <label for="avail_saturday">Saturday</label>
+                            </div>
+                           
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="checkbox" id="avail_sunday" name="availability[]" value="Sunday">
+                                <label for="avail_sunday">Sunday</label>
+                            </div>
+                           
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <input type="checkbox" id="avail_weekdays" name="availability[]" value="Weekdays">
+                                <label for="avail_weekdays">Weekdays</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Specific Request:</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please tell us more about your enquiry or how you'd like to get involved..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Enquiry</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand & Logo -->
+            <div class="footer-col brand-col">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="Kasi-Tech Logo" class="footer-logo">
+                    <span class="footer-brand-title">Kasi-Tech Solutions</span>
+                </div>
+                <p class="footer-tagline">In pursuit of digital excellence</p>
+                
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/27630891350" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: About Kasi-Tech -->
+            <div class="footer-col">
+                <h4 class="footer-heading">About Kasi-Tech</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="about.html">Mission & Vision</a></li>
+                    <li><a href="services.html">Core Services</a></li>
+                    <li><a href="services.html">Systems Analysis</a></li>
+                    <li><a href="services.html">Database Management</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Helpful Links -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Helpful Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Request a Quote / Consultation</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Get In Touch -->
+            <div class="footer-col contact-col">
+                <h4 class="footer-heading">Get in touch</h4>
+                <p><strong>Email Address:</strong> KasiTechI@gmail.com</p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/27630891350" target="_blank" style="color: #ffffff; text-decoration: underline;">063 089 1350</a></p>
+                <p><strong>Telephone:</strong> 041 082 1316</p>
+                <div class="location-list">
+                    <p><strong>Location:</strong> Motherwell, Gqeberha</p>
+                    <p><strong>Operating Hours:</strong></p>
+                    <p>Mon-Fri: 08:00–17:00</p>
+                    <p>Weekends: 09:00–14:00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kasi-Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

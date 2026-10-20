@@ -1,0 +1,104 @@
+# Changelog
+
+All notable changes to the **Kasi-Tech Solutions** website will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+# Changelog
+
+All notable changes to the Kazi_Tech Solutions  website are recorded here.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses semantic version numbers.
+
+## [Unreleased]
+
+### Changed
+
+- Moved the navigation bar to the top of every page so that all branding and page content appears below it.
+
+### Planned
+
+- Replace placeholder business contact details with confirmed information.
+- Connect forms to a secure server-side form service when backend development is allowed.
+- Add CSS styling during the styling phase of the project.
+
+## [1.0.0] - 2026-07-28
+
+### Added
+
+​Added: Initialized repository structure and created root project directory.
+​Added: Created basic HTML starter templates for the 5 core pages (index.html, about.html, services.html, enquiry.html, contact.html).
+​Configured: Configured default HTML metadata, viewport settings, and standard semantic page shells.
+
+## [1.0.0] - 2026-07-30
+
+### Added
+
+ Drafted structured section containers (<header>, <main>, <footer>, <section>) matching business goals.
+​Implemented placeholder content for the primary core service areas: Web Development, Database Management, and Systems Analysis.
+
+### ​Updated
+ Added initial business info sections aligned with target audience engagement goals.
+
+## [1.0.0] - 2026-08-04
+
+ Core Navigation & Feature Integration
+
+ ## Added
+​ Created consistent global top navigation bar across all 5 HTML files to ensure uniform site navigation.
+​ Built interactive HTML consultation request form on enquiry.html including inputs for:
+​Full Name
+​Email Address
+​Service Required dropdown (Web Dev, Database, Systems Analysis)
+​Project Details text area
+​Constructed universal footer component containing operating hours, contact information, and copyright notices
+
+## [1.0.0] - 2026-08-11
+​ Structural Refinement & Link Validation (Milestone 1)
+​Completed: Validated semantic HTML5 tags and structure across all pages.
+​Updated: Corrected internal relative anchor paths to ensure seamless navigation between Home, About, Services, Enquiry, and Contact.
+​Refined: Updated page headings and section layouts based on research and proposal guidelines.
+
+## [1.0.0] - 2026-08-13
+
+​ Folder Architecture & Production Prep (Milestone 2)
+​Completed: Organized final project directory structure (/css, /images, /js).
+​Refined: Cleaned up code layout and verified Apache shared hosting compatibility for deployment to target domain (www.Kasi-Techsolutions.co.za).
+​Prepared: Finalized base HTML/CSS build in preparation for upcoming Part 1 milestone push
+
+
+
+## [1.0.0] - 2026-09-17
+
+### Added
+- Initial release of the Kasi-Tech Solutions company website
+- **Home page** (`index.html`) with hero banner, service highlights, and call-to-action
+- **About Us page** with company history, mission, vision, and team profiles
+- **Services page** showcasing Web Application, Network Infrastructure, and Database & System Analysis
+- **Enquiry page** with full consultation/quotation request form
+- **Contact Us page** with callback form, contact details, opening hours, and embedded Google Map
+- Responsive CSS stylesheet (`style.css`) using CSS custom properties, Flexbox, and Grid
+- Multi-column footer with brand info, helpful links, contact details, and social media icons
+- Font Awesome 6.5.1 icons integration
+- Consistent branding (navy blue primary + gold accent colour scheme)
+- Mobile-friendly navigation and layout (breakpoints at 900px and 600px)
+
+### Team Credits
+- Somila Manentsa – IT Manager & Systems Analyst
+- Landile Mbuti – Infrastructure Specialist
+- Asavela Ngcamla – Database Architect
+- Kubobonke Diko – Web Systems Developer
+
+---
+
+## [Unreleased]
+
+### Planned
+- Connect enquiry and contact forms to a backend / email service
+- Standardise all internal file paths and filenames (case consistency)
+- Add client-side form validation
+- Image optimisation (WebP format + responsive sizes)
+- Optional FAQ or blog section

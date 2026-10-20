@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kasi_Tech Solutions</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JavaScript Files -->
+    <script src="../JavaScript/main.js" defer></script>
+    <script src="../JavaScript/lightbox.js" defer></script>
+    <script src="../JavaScript/search.js" defer></script>
+
+    <!-- EmailJS SDK v3 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("BBtlIH8y6peL-7imf");
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <img src="../images/logo.png" alt="Kasi-Tech Logo" class="nav-logo">
+                Kasi_Tech Solutions
+            </a>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contactus.html" aria-current="page">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Top Banner Heading -->
+    <section class="page-header">
+        <div class="container">
+            <p class="eyebrow">Get In Touch</p>
+            <h1>How would you like to contact Kasi_Tech?</h1>
+            <p class="page-introduction">We are here to help you with all your IT and technical needs.</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <main class="contact-section">
+        <div class="container contact-grid">
+            
+            <!-- Left Side: Main Contact Form Card -->
+            <div class="contact-card form-card">
+                <h2>Request a callback</h2>
+                <p class="card-subtitle">Give us some info so the right person can get back to you.</p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="Name">First name</label>
+                            <!-- Updated name to match {{fullName}} in template -->
+                            <input type="text" id="Name" name="fullName" placeholder="First name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Surname">Last name</label>
+                            <!-- Updated name to match {{subject}} in template -->
+                            <input type="text" id="Surname" name="subject" placeholder="Last name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ContactNumber">Phone</label>
+                        <!-- Updated name to match {{mobileNumber}} in template -->
+                        <input type="tel" id="ContactNumber" name="mobileNumber" placeholder="Phone number" required>
+                        <span class="error-message" id="phonenumberError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <!-- Updated name to match {{email}} in template -->
+                        <input type="email" id="Email" name="email" placeholder="Email address" required>
+                        <span class="error-message" id="EmailError"></span>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn-primary">CONTACT ME</button>
+                </form>
+            </div>
+
+            <!-- Right Side: Contact Info & Hours Cards -->
+            <div class="contact-side-column">
+                
+                <!-- Call Info Card -->
+                <div class="contact-card info-card">
+                    <h3>Give us a call</h3>
+                    <p class="contact-highlight">041 082 1316</p>
+                    <p class="contact-subtext"><strong>WhatsApp:</strong> <a href="https://wa.me/27630891350" target="_blank" style="color: var(--primary); text-decoration: underline;">063 089 1350</a></p>
+                    <p class="contact-subtext"><strong>Email:</strong> KasiTechI@gmail.com</p>
+                </div>
+
+                <!-- Hours Card -->
+                <div class="contact-card info-card">
+                    <h3>Opening Hours</h3>
+                    <p><strong>Mon-Fri:</strong> 08:00 - 17:00</p>
+                    <p><strong>Weekends:</strong> 09:00 - 14:00</p>
+                </div>
+
+                <!-- Location & Map Card -->
+                <div class="contact-card info-card">
+                    <h3>Our Location</h3>
+                    <p>Motherwell, Gqeberha</p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848775.2537630413!2d24.872189391314897!3d-33.798676323205726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7b290045ffd62b%3A0x86fd2337cd894226!2sGqeberha!5e0!3m2!1sen!2sza!4v1786002525854!5m2!1sen!2sza" 
+                        width="100%" 
+                        height="180" 
+                        style="border:0; border-radius: 6px; margin-top: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand & Logo -->
+            <div class="footer-col brand-col">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="Kasi-Tech Logo" class="footer-logo">
+                    <span class="footer-brand-title">Kasi-Tech Solutions</span>
+                </div>
+                <p class="footer-tagline">In pursuit of digital excellence</p>
+                
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/27630891350" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: About Kasi-Tech -->
+            <div class="footer-col">
+                <h4 class="footer-heading">About Kasi-Tech</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="about.html">Mission & Vision</a></li>
+                    <li><a href="services.html">Core Services</a></li>
+                    <li><a href="services.html">Systems Analysis</a></li>
+                    <li><a href="services.html">Database Management</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Helpful Links -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Helpful Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Request a Quote / Consultation</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Get In Touch -->
+            <div class="footer-col contact-col">
+                <h4 class="footer-heading">Get in touch</h4>
+                <p><strong>Email Address:</strong> KasiTechI@gmail.com</p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/27630891350" target="_blank" style="color: #ffffff; text-decoration: underline;">063 089 1350</a></p>
+                <p><strong>Telephone:</strong> 041 082 1316</p>
+                <div class="location-list">
+                    <p><strong>Location:</strong> Motherwell, Gqeberha</p>
+                    <p><strong>Operating Hours:</strong></p>
+                    <p>Mon-Fri: 08:00–17:00</p>
+                    <p>Weekends: 09:00–14:00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kasi-Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS Integration Handler -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
+
+            emailjs.sendForm('service_d8lbz5b', 'template_4xx3ojc', this)
+                .then(function() {
+                    alert('Thank you! Your request has been sent successfully.');
+                    document.getElementById('contact-form').reset();
+                    submitBtn.textContent = 'CONTACT ME';
+                    submitBtn.disabled = false;
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    alert('Oops! Something went wrong while sending your message. Please try again.');
+                    submitBtn.textContent = 'CONTACT ME';
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>

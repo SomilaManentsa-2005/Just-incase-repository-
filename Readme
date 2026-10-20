@@ -1,0 +1,248 @@
+# Kasi-Tech Solutions
+
+**In pursuit of digital excellence**
+
+A multi-page company website for **Kasi-Tech Solutions**, a technology consulting firm based in Motherwell, Gqeberha (Nelson Mandela Bay), South Africa.
+
+The site showcases the company’s services, team, history, and provides enquiry and contact forms for local small-to-medium enterprises.
+
+---
+# Kasi_Tech Website
+
+An HTML5-only, five-page website created from the Kasi_Tech proposal. It presents the business, promotes its technology services and gives customers ways to submit inquiries, quotation requests and booking requests.
+
+## Pages
+
+- `index.html` — Home page and service overview
+- `about.html` — Business history, mission, vision, values and target audience
+- `service.html` — Database & System analysis,IT & Network Support,Web development and design
+- `inquiry.html` — Inquiry, quotation and booking request form
+- `contact.html` — Contact information, hours and contact form
+
+## Folder structure
+
+```text
+Kasi_Tech/
+├── index.html
+├── about.html
+├── service.html
+├── inquiry.html
+├── contact.html
+├── README.md
+├── CHANGELOG.md
+└── images/
+    ├── database.jpg
+    ├── network.webp
+    ├── Tech Picture.jpg
+    └── Webdev.jpg
+```
+
+## How to run
+
+1. Extract the ZIP file.
+2. Open the `Part One Assignment1 WEDE5020  Somila Manentsa` folder.
+3. Double-click `index.html`, or open it using a web browser.
+4. Use the navigation menu to visit all five pages.
+
+No installation, server, CSS or JavaScript is required.
+
+## Important setup before publishing
+
+The proposal did not include confirmed business contact details. Search all HTML files and replace:
+
+- `+27 00 000 0000` with the correct telephone number.
+- `Kasi_Tech.co.za` with the active business email address.
+- `[Insert street address]`, `[Insert suburb]` and `[Insert city]` with the physical address.
+- The example operating hours if the business follows a different schedule.
+
+## Forms
+
+The inquiry and contact forms use HTML validation and `mailto:` submission. When a visitor submits a form, the browser opens the visitor's configured email application. A hosted production website should later connect these forms to a secure server-side form handler or database.
+
+## HTML validation
+
+Validate every page using the official W3C Markup Validation Service: <https://validator.w3.org/>
+
+## Version control
+
+Suggested first Git commands:
+
+```bash
+git init
+git add .
+git commit -m "Create initial Kasi_Tech  HTML website"
+git branch -M main
+```
+
+Create an empty GitHub repository, then follow GitHub's instructions to add the remote URL and push the `main` branch.
+
+## Technology and credits
+
+- HTML5 semantic markup
+- Original JPG illustrations included in this project
+- No third-party image downloads, fonts, CSS frameworks or JavaScript libraries
+
+Proposed domain: `www.Kasi_Tech Solution.co.za`
+
+## Github
+https://github.com/somilamanentsa/Part-One-Assignment1-WEDE5020-Somila-Manentsa
+
+## Netlify 
+https://app.netlify.com/teams/somilamanentsa/overview
+
+
+
+## About the Business
+
+Kasi-Tech Solutions was founded in **2023** as a small freelance IT collective offering hardware support and basic network setups. It has since grown into a full-service technology consulting firm specialising in:
+
+- Custom web development
+- Network infrastructure
+- Database design & system analysis
+- IT support for local businesses
+
+**Tagline:** *In pursuit of digital excellence*
+
+---
+
+## Pages
+
+| Page            | File                | Description                                              |
+|-----------------|---------------------|----------------------------------------------------------|
+| Home            | `index.html`        | Hero banner, service highlights, and call-to-action      |
+| About Us        | `pages/about.html`  | Company history, mission, vision, and team members       |
+| Services        | `pages/services.html` | Detailed overview of the three core service offerings  |
+| Enquiry         | `pages/enquiry.html` | Full consultation / quotation request form             |
+| Contact Us      | `pages/contactus.html` | Callback form, contact details, opening hours & map  |
+
+---
+
+## Features
+
+- Fully responsive design (desktop, tablet, mobile)
+- Consistent branding with primary navy blue and gold accent colours
+- Accessible navigation with proper `aria` attributes
+- Contact & enquiry forms (ready for backend integration)
+- Embedded Google Map on the Contact page
+- Social media links (Facebook, X, Instagram, YouTube, LinkedIn, WhatsApp)
+- Clean multi-column footer with useful links and contact information
+
+---
+
+## Project Structure
+
+```
+kasi-tech-solutions/
+├── index.html                 # Home page
+├── css/
+│   └── style.css              # Main stylesheet
+├── images/
+│   ├── logo.png
+│   ├── Tech Picture 1.jpg
+│   ├── webdev.jpg
+│   ├── network.webp
+│   └── database.jpg
+└── pages/
+    ├── about.html
+    ├── services.html
+    ├── enquiry.html
+    └── contactus.html
+```
+
+> **Note:** Some HTML files currently use slightly different path casing (e.g. `About.html` vs `about.html`). It is recommended to standardise all filenames to lowercase for consistency across operating systems.
+
+---
+
+## Technologies Used
+
+- **HTML5** – Semantic structure
+- **CSS3** – Custom properties (CSS variables), Flexbox, Grid, media queries
+- **Font Awesome 6.5.1** – Icons (via CDN)
+- **Google Maps Embed** – Location map on Contact page
+
+No JavaScript frameworks or build tools are required. The site is pure static HTML/CSS.
+
+---
+
+## How to Run Locally
+
+1. Download or clone the project folder.
+2. Open `index.html` in any modern web browser  
+   **or**  
+   Use a local development server (recommended):
+
+   ```bash
+   # Using Python
+   python -m http.server 8000
+
+   # Using VS Code Live Server extension
+   # Right-click index.html → "Open with Live Server"
+   ```
+
+3. Navigate to `http://localhost:8000` (or the address shown by your server).
+
+---
+
+## Team
+
+| Name              | Role                              |
+|-------------------|-----------------------------------|
+| Somila Manentsa   | IT Manager & Systems Analyst      |
+| Landile Mbuti     | Infrastructure Specialist         |
+| Asavela Ngcamla   | Database Architect                |
+| Kubobonke Diko    | Web Systems Developer             |
+
+---
+
+## Contact Information
+
+- **Email:** KasiTechI@gmail.com
+- **Telephone:** 041 082 1316
+- **WhatsApp:** 063 089 1350
+- **Location:** Motherwell, Gqeberha
+- **Hours:**  
+  - Mon–Fri: 08:00–17:00  
+  - Weekends: 09:00–14:00
+
+---
+
+## Colour Palette
+
+| Variable          | Value                  | Usage                    |
+|-------------------|------------------------|--------------------------|
+| `--primary`       | `hsl(226, 71%, 24%)`   | Header, buttons, links   |
+| `--primary-dark`  | `#0b2942`              | Dark accents, headings   |
+| `--accent`        | `#f4b41a`              | Highlights, hover states |
+| `--background`    | `#c5cdd4`              | Page background          |
+| `--surface`       | `#ffffff`              | Cards and forms          |
+| `--text`          | `#263238`              | Body text                |
+| `--border`        | `#d8e2ec`              | Borders and dividers     |
+
+---
+
+## Future Improvements (Optional)
+
+- Connect the enquiry and contact forms to a backend or email service (e.g. Formspree, EmailJS, or custom PHP/Node endpoint)
+- Standardise all internal links and filenames to lowercase
+- Add a simple JavaScript form validation layer
+- Optimise images for web (WebP + responsive sizes)
+- Add a dedicated FAQ or blog section
+
+---
+
+## References
+
+The following resources were used during the development of this website:
+
+- **[W3Schools](https://www.w3schools.com/)** – HTML, CSS, and web development tutorials and documentation  
+- **[GitHub](https://github.com/)** – Version control and project hosting platform  
+
+---
+
+## License
+
+© 2026 Kasi-Tech Solutions. All rights reserved.
+
+---
+
+**Built with care for local businesses in the Eastern Cape.**
