@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const searchWrapper = searchInput.parentElement;
     searchWrapper.style.position = 'relative';
+    
 
     // Remove any existing results box to prevent duplicates
     const existingBox = document.getElementById('search-results-overlay');
