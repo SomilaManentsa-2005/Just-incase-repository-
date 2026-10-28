@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- JavaScript Files -->
-    <script src="../JavaScript/main.js" defer></script>
-    <script src="../JavaScript/lightbox.js" defer></script>
-    <script src="../JavaScript/search.js" defer></script>
-    <script src="../JavaScript/validation.js" defer></script>
+<script src="../JavaScript/main.js" defer></script>
+<script src="../JavaScript/lightbox.js" defer></script>
+<script src="../JavaScript/search.js" defer></script>
+<script src="../JavaScript/validation.js" defer></script>
 
-    <!-- EmailJS SDK v3 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("BBtlIH8y6peL-7imf");
-        })();
-    </script>
 
-    <title>EnquiryPage | Kasi-Tech Solutions</title>
+
+
+    <title>EnquiryPage</title>
 </head>
 <body>
     
@@ -37,7 +31,7 @@
                 <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="enquiry.html" aria-current="page">Enquiry</a>
+                <a href="enquiry.html">Enquiry</a>
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </div>
@@ -56,8 +50,7 @@
     <main class="contact-section">
         <div class="container">
             <div class="contact-card" style="max-width: 800px; margin: 0 auto;">
-                <!-- Added id="contact-form" so validation.js or EmailJS can target it -->
-                <form id="contact-form" class="contact-form">
+                <form action="#" method="post" class="contact-form">
                     
                     <fieldset style="border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
                         <legend style="padding: 0 0.5rem; color: var(--primary-dark);"><strong>Your Personal Information</strong></legend>
@@ -65,28 +58,22 @@
                        
                         <div class="form-group" style="margin-bottom: 1rem;">
                             <label for="fullname">Full Name:</label>
-                            <!-- name="fullName" matches your EmailJS template variable {{fullName}} -->
-                            <input type="text" id="fullname" name="fullName" placeholder="e.g. Somila Manentsa" required>
-                            <span class="error-message" id="nameError"></span>
+                            <input type="text" id="fullname" name="fullname" placeholder="e.g. Somila Manentsa" required>
                         </div>
 
                         <div class="form-group" style="margin-bottom: 1rem;">
                             <label for="email">Email Address:</label>
-                            <!-- name="email" matches your EmailJS template variable {{email}} -->
                             <input type="email" id="email" name="email" placeholder="e.g. somilamanentsa@example.com" required>
-                            <span class="error-message" id="EmailError"></span>
                         </div>
 
                         <div class="form-group" style="margin-bottom: 1rem;">
                             <label for="phone">Phone / WhatsApp Number:</label>
-                            <!-- name="mobileNumber" matches your EmailJS template variable {{mobileNumber}} -->
-                            <input type="tel" id="phone" name="mobileNumber" placeholder="e.g. 072 763 3457">
-                            <span class="error-message" id="phonenumberError"></span>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. 072 763 3457">
                         </div>
 
                         <div class="form-group">
                             <label for="location">Suburban Area in Gqeberha:</label>
-                            <input type="text" id="location" name="location" placeholder="e.g. St Georges, Motherwell">
+                            <input type="text" id="location" name="location" placeholder="e.g. St Georges , Motherwell">
                         </div>
                     </fieldset>
 
@@ -98,15 +85,14 @@
                             <label for="category">Enquiry Category:</label>
                             <select id="category" name="category" required>
                                 <option value="" disabled selected>-- Select an Enquiry Type --</option>
-                                <option value="booking">Booking Consultation</option>
+                                <option value="booking">booking Consultation</option>
                                 <option value="Service Quotation">Services Quotation fee</option>
                                 <option value="general">General Enquiry</option>
                             </select>
-                            <span class="error-message" id="categoryError"></span>
                         </div>
 
                         <div style="margin-bottom: 1.5rem;">
-                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Availability for:</label><br><br>
+                            <label style="font-weight: bold; font-size: 0.9rem;">Preferred Availability for :</label><br><br>
                             
                             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
                                 <input type="checkbox" id="avail_saturday" name="availability[]" value="Saturday">
@@ -126,13 +112,11 @@
 
                         <div class="form-group">
                             <label for="message">Specific Request:</label>
-                            <!-- name="subject" matches your EmailJS template variable {{subject}} -->
-                            <textarea id="message" name="subject" rows="6" placeholder="Please tell us more about your enquiry or how you'd like to get involved..." required></textarea>
-                            <span class="error-message" id="messageError"></span>
+                            <textarea id="message" name="message" rows="6" placeholder="Please tell us more about your enquiry or how you'd like to get involved..." required></textarea>
                         </div>
                     </fieldset>
 
-                    <button type="submit" id="submit-btn" class="btn-primary" style="align-self: flex-start;">Submit Enquiry</button>
+                    <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Enquiry</button>
 
                 </form>
             </div>

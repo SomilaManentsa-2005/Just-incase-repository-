@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!contactForm) return;
 
-    // Disable browser default HTML validation bubbles in favor of custom messages
+    // Disable browser default HTML validation bubbles in favor of custom red messages
     contactForm.setAttribute('novalidate', 'true');
 
     // Remove red borders and error messages dynamically as the user types/changes fields
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const input = e.target;
         input.classList.remove('input-error');
         
-        // Find adjacent error spans or parent field errors
+        // Find adjacent error span within the parent .form-group
         const formGroup = input.closest('.form-group');
         if (formGroup) {
             const errorSpan = formGroup.querySelector('.error-message');
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isEnquiryPage = document.getElementById('fullname') !== null;
 
         let nameError = document.getElementById('nameError');
+        let firstNameError = document.getElementById('firstNameError');
         let phoneError = document.getElementById('phonenumberError');
         let emailError = document.getElementById('EmailError');
         let categoryError = document.getElementById('categoryError');
@@ -96,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!category || category.value === '') {
                 if (categoryError) {
                     categoryError.textContent = 'Please select an enquiry category.';
-                } else if (nameError) {
-                    nameError.textContent = 'Please select an enquiry category.';
                 }
                 if (category) category.classList.add('input-error');
                 isValid = false;
@@ -116,25 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('ContactNumber');
             const email = document.getElementById('Email');
 
-            let nameFieldValid = true;
-            let errorMessage = '';
-
+            // First Name Validation
             if (!firstName || firstName.value.trim() === '') {
-                errorMessage = 'Please enter your first name.';
+                if (firstNameError) {
+                    firstNameError.textContent = 'First name is required.';
+                } else if (nameError && !surname) {
+                    nameError.textContent = 'First name is required.';
+                }
                 if (firstName) firstName.classList.add('input-error');
-                nameFieldValid = false;
-            }
-            if (!surname || surname.value.trim() === '') {
-                errorMessage = errorMessage ? 'Please enter both your first and last name.' : 'Please enter your last name.';
-                if (surname) surname.classList.add('input-error');
-                nameFieldValid = false;
-            }
-
-            if (!nameFieldValid) {
-                if (nameError) nameError.textContent = errorMessage;
                 isValid = false;
             }
 
+            // Last Name Validation
+            if (!surname || surname.value.trim() === '') {
+                if (nameError) nameError.textContent = 'Last name is required.';
+                if (surname) surname.classList.add('input-error');
+                isValid = false;
+            }
+
+            // Phone Number Validation
             if (!phone || phone.value.trim() === '') {
                 if (phoneError) phoneError.textContent = 'Phone number is required.';
                 if (phone) phone.classList.add('input-error');
@@ -149,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            // Email Address Validation
             if (!email || email.value.trim() === '') {
                 if (emailError) emailError.textContent = 'Email address is required.';
                 if (email) email.classList.add('input-error');
@@ -183,5 +183,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-

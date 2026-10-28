@@ -12,6 +12,7 @@
     <script src="../JavaScript/main.js" defer></script>
     <script src="../JavaScript/lightbox.js" defer></script>
     <script src="../JavaScript/search.js" defer></script>
+    <script src="../JavaScript/validation.js" defer></script>
 
     <!-- EmailJS SDK v3 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -59,32 +60,30 @@
                 <h2>Request a callback</h2>
                 <p class="card-subtitle">Give us some info so the right person can get back to you.</p>
                 
-                <form id="contact-form" class="contact-form">
+                <!-- Added novalidate to prevent browser default tooltips -->
+                <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="Name">First name</label>
-                            <!-- Updated name to match {{fullName}} in template -->
-                            <input type="text" id="Name" name="fullName" placeholder="First name" required>
+                            <input type="text" id="Name" name="fullName" placeholder="First name">
+                            <span class="error-message" id="firstNameError"></span>
                         </div>
                         <div class="form-group">
                             <label for="Surname">Last name</label>
-                            <!-- Updated name to match {{subject}} in template -->
-                            <input type="text" id="Surname" name="subject" placeholder="Last name" required>
+                            <input type="text" id="Surname" name="subject" placeholder="Last name">
                             <span class="error-message" id="nameError"></span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="ContactNumber">Phone</label>
-                        <!-- Updated name to match {{mobileNumber}} in template -->
-                        <input type="tel" id="ContactNumber" name="mobileNumber" placeholder="Phone number" required>
+                        <input type="tel" id="ContactNumber" name="mobileNumber" placeholder="Phone number">
                         <span class="error-message" id="phonenumberError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="Email">Email</label>
-                        <!-- Updated name to match {{email}} in template -->
-                        <input type="email" id="Email" name="email" placeholder="Email address" required>
+                        <input type="email" id="Email" name="email" placeholder="Email address">
                         <span class="error-message" id="EmailError"></span>
                     </div>
 
@@ -210,28 +209,5 @@
         </div>
     </footer>
 
-    <!-- EmailJS Integration Handler -->
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const submitBtn = document.getElementById('submit-btn');
-            submitBtn.textContent = 'SENDING...';
-            submitBtn.disabled = true;
-
-            emailjs.sendForm('service_d8lbz5b', 'template_4xx3ojc', this)
-                .then(function() {
-                    alert('Thank you! Your request has been sent successfully.');
-                    document.getElementById('contact-form').reset();
-                    submitBtn.textContent = 'CONTACT ME';
-                    submitBtn.disabled = false;
-                }, function(error) {
-                    console.error('FAILED...', error);
-                    alert('Oops! Something went wrong while sending your message. Please try again.');
-                    submitBtn.textContent = 'CONTACT ME';
-                    submitBtn.disabled = false;
-                });
-        });
-    </script>
 </body>
 </html>
